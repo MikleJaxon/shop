@@ -20,6 +20,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #libraries
+    'mathfilters',
+
+    #apps
     'cart.apps.CartConfig',
     'shop.apps.ShopConfig',
     #'alreadynottest',    
