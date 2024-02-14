@@ -20,7 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
+    'cart.apps.CartConfig',
     'shop.apps.ShopConfig',
     #'alreadynottest',    
 ]
@@ -51,6 +51,7 @@ TEMPLATES = [
 
 
                 'shop.context_processors.categories',
+                'cart.context_processors.cart',
             ],
         },
     },

@@ -68,10 +68,6 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    """
-    A model representing a product.
-
-    """
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='products')
     title = models.CharField("Название", max_length=250)
@@ -100,12 +96,6 @@ class Product(models.Model):
 
 class ProductManager(models.Manager):
     def get_queryset(self):
-        """
-        Returns a queryset of products that are available.
-
-        Returns:
-            QuerySet: A queryset of products that are available.
-        """
         return super(ProductManager, self).get_queryset().filter(available=True)
 
 
